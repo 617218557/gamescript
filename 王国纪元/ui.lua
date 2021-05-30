@@ -1,0 +1,18 @@
+function showStartUi()
+	require "TSLib"
+	w,h = getScreenSize()
+	UINew(4,"选择功能,运输,点任务,刷帮助","确定","取消","uiconfig.dat",1,0,w,h,"255,255,255","255,255,255","","dot",1)
+	UIRadio(1,"missionSelect","运输,点任务,刷帮助","0",-1,0,"",1,1)
+	UILabel(2,"大米",15,"left","38,38,38",100,1)
+	UIEdit(2,"transportFoodCount","车","0",15,"left","38,38,38","number",200,0)
+	UILabel(2,"石头",15,"left","38,38,38",100,1)
+	UIEdit(2,"transportStoneCount","车","0",15,"left","38,38,38","number",200,0)
+	UILabel(2,"木头",15,"left","38,38,38",100,1)
+	UIEdit(2,"transportWoodCount","车","0",15,"left","38,38,38","number",200,0)
+	UILabel(2,"铁",15,"left","38,38,38",100,1)
+	UIEdit(2,"transportIronCount","车","0",15,"left","38,38,38","number",200,0)
+	UILabel(2,"金",15,"left","38,38,38",100,1)
+	UIEdit(2,"transportGoldCount","车","0",15,"left","38,38,38","number",200,0)
+	UIEdit(3,"clickMissionCount","张","0",15,"left","38,38,38","number",200,0)
+	UIShow()
+end

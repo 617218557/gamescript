@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import random
 import time
+import winsound
 
 # 连接模拟器
 d = u2.connect('emulator-5554')
@@ -56,7 +57,8 @@ def work():
 	#都匹配上result为3 不用跑 小于3就跑
 	if result < 3:
 		print('跑')
-		run_miner()
+		#run_miner()
+		winsound.Beep(500,1000)
 		return True
 	else:
 		print('没事')
@@ -66,7 +68,7 @@ def run_miner():
 	ran = random.randint(-5, 5)
 	#导航
 	d.click(30 + ran, 200 + ran)
-	time.sleep(1)
+	time.sleep(1.5)
 	#皮球
 	d.click(1077 + ran, 650 + ran)
 	time.sleep(.3)
@@ -79,6 +81,8 @@ def run_miner():
 
 
 hasRun = False
-while not hasRun:
+while True:
 	hasRun = work()
-	time.sleep(1)
+	if hasRun == True:
+		time.sleep(30)
+	time.sleep(1.5)

@@ -1,0 +1,9 @@
+{
+  "match_threshold": 0.9,
+  "devices": [
+    {
+      "address": "127.0.0.1:16384",
+      "remark": "123"
+    }
+  ]
+}
